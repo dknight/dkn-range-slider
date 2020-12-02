@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dkn. Range Slider</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
+  <script src="../dist/dkn-range-slider.min.js" defer></script>
+  <link rel="stylesheet" href="../dist/themes/all-themes.min.css" media="all">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/styles/atom-one-dark.min.css" media="screen">
+  <style>
+    html, body {
+      margin: 0;
+      text-align: center;
+      font: normal 10px sans-serif;
+      background-color: #fffdfe;
+    }
+    .wrapper {
+      margin: 0 auto;
+      text-align: left;
+      width: 100%;
+      padding: 0 5rem;
+      max-width: 126rem;
+      box-sizing: border-box;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10vw;
+    }
+    header hgroup {
+      text-align: center;
+    }
+    h1 {
+      font-size: 5rem;
+      font-weight: 300;
+      margin-bottom: .5rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #3c3744;
+    }
+    h3 {
+      font-size: 2.7rem;
+    }
+    h4 {
+      font-size: 1.8rem;
+    }
+    a {
+      color: #0074D9;
+    }
+    p {
+      font-size: 1.6rem;
+      margin-bottom: .5rem;
+    }
+    pre {
+      white-space: pre-line;
+      color: #A19FA3;
+      display: block;
+      font-size: 1.6rem;
+      line-height: 1.4;
+      overflow: visible;
+    }
+    pre code {
+      border-radius: 5px;
+    }
+    header a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 1.8rem 3.6rem;
+      margin-top: 5rem;
+      border-radius: 4rem;
+      transition: box-shadow 200ms ease-out,
+      background-color 200ms ease-out,
+      transform 200ms ease-out;
+      vertical-align: middle;
+    }
+    header a:hover {
+      box-shadow: 0 1.4rem 3rem -1.5rem rgba(0, 0 ,0, .75);
+      transform: scale(1.05);
+    }
+    header a.code {
+      background-color: rgba(221, 53, 110, 1);
+    }
+    header a.code:hover {
+      background-color: rgba(221, 53, 110, .9);
+    }
+    header a.docs {
+      color: #000;
+      background-color: rgba(254, 232, 86, 1);
+      margin-left: 1rem;
+    }
+    header a.docs:hover {
+      background-color: rgba(254 ,232, 86, .9);
+    }
+    .demo {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+    }
+    .demo > * {
+      flex: 1 1 50%;
+    }
+    footer {
+      font-size: 1.3rem;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      padding-top: 2rem;
+      margin: 4rem 0 3rem;
+    }
+    @media (max-width: 1023px) {
+      .demo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-bottom: 4rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #ddd;
+      }
+      .demo > * {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <hgroup>
+        <h1>Dkn. Range Slider</h1>
+        <h2>Custom range input based on web components API.</h2>
+      </hgroup>
+      <div>
+        <a href="https://github.com/dknight/dkn-range-slider" class="code">Code</a>
+        <a href="https://github.com/dknight/dkn-range-slider#readme" class="docs">Docs</a>
+      </div>
+    </header>
+    <main>
+      <p>NPM</p>
+      <pre><code class="shell">npm install dkn-range-slider</code></pre>
+
+      <p>CDN</p>
+      <pre><code class="shell">&lt;script src="TODO: cndcode" defer>&lt;/script></code></pre>
+
+      <pre><code class="html">&lt;script src="dkn">&lt;/script>
+          ...
+        &lt;dkn-range-slider>&lt;/dkn-range-slider></code></pre>
+      <h3>Demos and themes</h3>
+      <div class="demos" id="demos">
+        <section class="demo">
+          <dkn-range-slider class="theme-default"
+            ticks ticks-step="5"
+            label-value label-suffix="$" label-limit-min="Low budget" label-limit-max="High budget" label-access="Default theme"
+            id="slider-1"
+            min="0" max="100" step="1" value="20">
+          </dkn-range-slider>
+          <pre><code class="html">&lt;dkn-range-slider class="theme-default"
+              ticks ticks-step="5"
+              label-value label-suffix="$" label-limit-min="Low budget" label-limit-max="High budget" label-access="Default theme"
+              id="slider-1"
+              min="0" max="100" step="1" value="20">&lt;/dkn-range-slider>
+          </code></pre>
+        </section>
+        <section class="demo">
+          <dkn-range-slider class="theme-minimal"
+            label-access="Minimal theme"
+            id="slider-2"
+            min="0" max="100" step="1" value="20"></dkn-range-slider>
+          <pre><code class="html">&lt;dkn-range-slider class="theme-minimal"
+            label-access="Minimal theme"
+            id="slider-2"
+            min="0"max="100" tep="1"value="20">&lt;/dkn-range-slider>
+          </code></pre>
+        </section>
+        <section class="demo">
+          <dkn-range-slider class="theme-azure"
+            label-value label-access="Azure theme"
+            id="slider-3"
+            min="0" max="100" step="1" value="76"></dkn-range-slider>
+            <pre><code class="html">&lt;dkn-range-slider class="theme-azure"
+              label-value label-access="Azure theme"
+              id="slider-3"
+              min="0" max="100" step="1" value="0">&lt;/dkn-range-slider></code></pre>
+        </section>
+        <section class="demo">
+          <dkn-range-slider class="theme-pink"
+            label-value label-access="Pink theme"
+            id="slider-4" min="0" max="100" step="1" value="44"
+            ticks ticks-step="10"></dkn-range-slider>
+            <pre><code class="html">&lt;dkn-range-slider class="theme-pink"
+              label-value label-access="Pink theme"
+              id="slider-4"
+              min="0" max="100" step="1" value="44"
+              ticks ticks-step="10">&lt;/dkn-range-slider></code></pre>
+        </section>
+        <section class="demo">
+          <form id="aform" action="index.html" method="post">
+            <p>Form data example. If <b>name</b> attribute is defined, the value of slider will be visible in form.</p>
+            <br>
+            <dkn-range-slider class="theme-default"
+              name="slider-value" id="slider-4"
+              min="0" max="100"
+              ticks ticks-step="10"></dkn-range-slider>
+            <br>
+            <button type="submit">Submit</button>
+          </form>
+          <pre><code class="html">&lt;form id="aform" action="index.html" method="post">
+            &lt;dkn-range-slider class="theme-default"
+              name="slider-value" id="slider-4"
+              min="0" max="100"
+              ticks ticks-step="10">&lt;/dkn-range-slider>
+              &lt;br>
+              &lt;button type="submit">Submit&lt;/button>
+              &lt;/form></code></pre>
+        </section>
+        <section class="demo">
+          <p>More themes will be added soon...</p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      &copy; 2020 <a href="https://opensource.org/licenses/MIT">MIT</a>
+      <a href="https://github.com/dknight/dkn-range-slider">Source</a>
+  </footer>
+  </div>
+  <script>
+    hljs.initHighlightingOnLoad();
+    const form = document.getElementById('aform');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = {};
+      const formData = new FormData(event.target);
+      formData.forEach((value, key) => data[key] = value);
+      const json = JSON.stringify(data);
+      alert(JSON.stringify(data));
+    });
+  </script>
+</body>
+</html>

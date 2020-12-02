@@ -1,0 +1,49 @@
+dkn-range-slider.theme-minimal {
+  /* layout */
+  --range-selector-margin: 0;
+  --range-selector-font: 10px/1 Arial, Helvetica, sans-serif;
+  --focus-outline: 1px dotted;
+  --container-padding: 0;
+  --range-selector-height: auto;
+
+  /* track */
+  --tx: 0%;
+  --track-c: #777;
+  --track-pc: #ff8b00;
+  --track-bg: linear-gradient(var(--track-pc), var(--track-pc)) 0 / var(--tx) 100% no-repeat var(--track-c);
+  --track-h: 8px;
+  --track-cursor: pointer;
+  --track-border-radius: 10px;
+  --track-border: none;
+  --track-box-shadow: none;
+
+  /* thumb */
+  --thumb-bg: #ff8b00;
+  --thumb-w: 40px;
+  --thumb-h: 40px;
+  --thumb-border-radius: 50%;
+  --thumb-border: 4px solid #fff;
+  --thumb-box-shadow: 0 0 4px #7f2ccb;
+  --thumb-cursor: pointer;
+  --thumb-transition: none;
+  --thumb-focus-transform: none;
+
+  /* labels */
+  --label-value-y: -34px;
+  --label-value-c: inherit;
+  --label-value-font: bold 1.8em/1 Arial, Helvetica, sans-serif;
+  --label-value-padding: 0;
+  --label-value-clip-path: none;
+  --label-value-bg: none;
+  --labels-c: #3c3744;
+  --label-lims-y: 8px;
+  --lim-labels-font: 1.6em Arial, Helvetica, sans-serif;
+
+    /* ticks */
+    --ticks-y: 15px;
+    --tick-c: var(--labels-c);
+    --tick-bg: var(--labels-c);
+    --tick-w: .1rem;
+    --tick-h: .8rem;
+    --tick-margin: 0 0 .3rem;
+}

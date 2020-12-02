@@ -1,0 +1,50 @@
+dkn-range-slider.theme-azure {
+  /* layout */
+  --range-selector-margin: 0;
+  --range-selector-font: 10px/1 Arial, Helvetica, sans-serif;
+  --focus-outline: 1px dotted;
+  --container-padding: 0;
+  --range-selector-height: auto;
+
+  /* track */
+  --tx: 0%;
+  --track-c: #bdbdbd;
+  --track-pc: #3f51b5;
+  --track-bg: linear-gradient(var(--track-pc), var(--track-pc)) 0 / var(--tx) 100% no-repeat var(--track-c);
+  --track-h: .6rem;
+  --track-cursor: pointer;
+  --track-border-radius: 10px;
+  --track-border: none;
+  --track-box-shadow: none;
+
+  /* thumb */
+  --thumb-bg: #3f51b5;
+  --thumb-w: 40px;
+  --thumb-h: 40px;
+  --thumb-border-radius: 50%;
+  --thumb-border: none;
+  --thumb-box-shadow: none;
+  --thumb-cursor: pointer;
+  --thumb-transition: all .15s ease-out;
+  --thumb-focus-transform: scale(1.2);
+
+  /* labels */
+  --label-value-y: 12px;
+  --label-value-c: #fff;
+  --label-value-font: bold 1.5em/1 Arial, Helvetica, sans-serif;
+  --label-value-padding: 0 2px;
+  --label-value-clip-path: none;
+  --label-value-bg: none;
+  --labels-c: #3c3744;
+  --label-lims-y: .8rem;
+  --lim-labels-font: 1.6em Arial, Helvetica, sans-serif;
+
+  /* ticks */
+  --ticks-y: 1.5rem;
+  --tick-c: var(--labels-c);
+  --tick-bg: var(--labels-c);
+  --tick-w: .1rem;
+  --tick-h: .8rem;
+  --tick-margin: 0 0 .3rem;
+}
+

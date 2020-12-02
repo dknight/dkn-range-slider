@@ -1,0 +1,44 @@
+{
+  "name": "dkn-range-slider",
+  "version": "0.1.0",
+  "description": "Custom range input based on web components API.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "karma start",
+    "gzip": "npm run build; gzip -kf9 ./dist/dkn-range-slider.min.js; wc -c ./dist/dkn-range-slider.min.js.gz"
+  },
+  "keywords": [
+    "web component",
+    "slider",
+    "range",
+    "input"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dknight/dkn-range-slider"
+  },
+  "author": "Dknight",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "4.2.0",
+    "del": "6.0.0",
+    "gulp": "4.0.2",
+    "gulp-clean-css": "4.3.0",
+    "gulp-concat": "2.6.1",
+    "gulp-rename": "2.0.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-string-replace": "1.1.2",
+    "gulp-terser": "2.0.0",
+    "karma": "5.2.3",
+    "karma-chai": "0.1.0",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-coverage": "2.0.3",
+    "karma-mocha": "2.0.1",
+    "karma-sinon": "1.0.5",
+    "mocha": "8.2.1",
+    "nyc": "15.1.0",
+    "puppeteer": "5.5.0",
+    "sinon": "9.2.1"
+  }
+}

@@ -1,0 +1,136 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--range-selector-margin, 0);
+  font: var(--range-selector-font, 10px/1 Arial, Helvetica, sans-serif) ;
+  color: var(--labels-c, #3c3744);
+  height: var(--range-selector-height, auto);
+}
+:host([disabled]) {
+  opacity: .5;
+  pointer-events: none;
+}
+:host([hidden]) {
+  display: none;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  padding: var(--container-padding, 0);
+}
+input[type=range]:focus {
+  outline: none;
+}
+label[for=rs] {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.label-value {
+  position: relative;
+  z-index: 1;
+  top: var(--label-value-y, -1rem);
+  white-space: nowrap;
+  color: var(--label-value-c, inherit);
+  font: var(--label-value-font, bold 1.8em/1 Arial, Helvetica, sans-serif);
+  padding: var(--label-value-padding, 0);
+  clip-path: var(--label-value-clip-path, none);
+  background: var(--label-value-bg, none);
+  pointer-events: none;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.label-limit-min,
+.label-limit-max {
+  margin: var(--label-lims-y, .8rem) 0 0 0;
+  font: var(--lim-labels-font, 1.6em Arial, Helvetica, sans-serif);
+}
+.label-limit-max {
+  margin-left: auto;
+}
+
+.ticks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--ticks-y, 0);
+  width: 100%;
+}
+.ticks > * {
+  color: var(--tick-c, var(--labels-c));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 0;
+}
+.ticks > *::before {
+  content: '';
+  display: block;
+  width: var(--tick-w, .1rem);
+  height: var(--tick-h, .8rem);
+  margin: var(--tick-margin, 0 0 .3rem);
+  background: var(--tick-bg, var(--labels-c));
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 100%;
+  height: var(--track-h, 1.6rem);
+  cursor: var(--track-cursor, pointer);
+  box-shadow: var(--track-box-shadow, none);
+  background: var(--track-bg, linear-gradient(var(--track-pc, #3c91e6), var(--track-pc, #3c91e6)) 0 / var(--tx) 100% no-repeat var(--track-c, #e2e2e2));
+  border-radius: var(--track-border-radius, 1rem);
+  border: var(--track-border, none);
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: var(--track-h, 1.6rem);
+  cursor: var(--track-cursor, pointer);
+  box-shadow: var(--track-box-shadow, none);
+  background: var(--track-bg, linear-gradient(var(--track-pc, #3c91e6), var(--track-pc, #3c91e6)) 0 / var(--tx) 100% no-repeat var(--track-c, #e2e2e2));
+  border-radius: var(--track-border-radius, 1rem);
+  border: var(--track-border, none);
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  box-shadow: var(--thumb-box-shadow, 0 0 4px #3c91e6);
+  height: var(--thumb-h, 32px);
+  width: var(--thumb-w, 32px);
+  border: var(--thumb-border, 3px solid #fff);
+  border-radius: var(--thumb-border-radius, 50%);
+  background: var(--thumb-bg, #3c91e6);
+  cursor: var(--thumb-cursor, pointer);
+  margin-top: calc(.5 * (var(--track-h) - var(--thumb-h)));
+  box-sizing: border-box;
+  transition: var(--thumb-transition, all .15s ease-in);
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: var(--thumb-box-shadow, 0 0 4px #3c91e6);
+  height: var(--thumb-h, 32px);
+  width: var(--thumb-w, 32px);
+  border: var(--thumb-border, 3px solid #fff);
+  border-radius: var(--thumb-border-radius, 50%);
+  background: var(--thumb-bg, #3c91e6);
+  cursor: var(--thumb-cursor, pointer);
+  box-sizing: border-box;
+  transition: var(--thumb-transition, all .15s ease-in);
+}
+input[type=range]:focus::-webkit-slider-thumb {
+  outline: var(--focus-outline, 1px dotted);
+  transform: var(--thumb-focus-transform, scale(1.2));
+}
+input[type=range]:focus::-moz-range-thumb {
+  outline: var(--focus-outline, 1px dotted);
+  transform: var(--thumb-focus-transform, scale(1.2));
+}
