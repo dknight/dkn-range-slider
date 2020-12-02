@@ -11,7 +11,7 @@ npm install dkn-range-slider
 
 CDN
 ```html
-<script src="TODO: link" defer></script>
+<script src="https://unpkg.com/dkn-range-slider@latest/dist/dkn-range-slider.min.js" defer></script>
 ```
 
 ### Usage
