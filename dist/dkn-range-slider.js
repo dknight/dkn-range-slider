@@ -1,7 +1,7 @@
 /*
  * https://github.com/dknight/dkn-range-slider
  * @license MIT
- * @version 0.1.3
+ * @version 0.1.4
 */
 /**
  * Custom range input based on web components API.
