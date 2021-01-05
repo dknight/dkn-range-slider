@@ -72,5 +72,6 @@ const minJs = () => {
 const clean = () => {
   return del([SLIDER_INJECTED_MIN_STYLE_PATH]);
 };
+
 exports.default = gulp.series(css, combineAllThemes,
-    createInjectedCss, minJs, distSource, clean);
+  createInjectedCss, minJs, distSource, clean);

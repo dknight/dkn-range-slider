@@ -1,4 +1,4 @@
-# dkn-rangel-slider
+# dkn-range-slider
 
 Custom range-input based on web components API with zero dependencies (2.7kb gzipped).
 Some themes already included out-of-box in the packaged, but the slider has rich CSS
