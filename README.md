@@ -1,8 +1,12 @@
-# About
+# dkn-rangel-slider
 
 Custom range-input based on web components API with zero dependencies (2.7kb gzipped).
+Some themes already included out-of-box in the packaged, but the slider has rich CSS
+styling API based on CSS custom-properties.
 
-## Install and usage
+Check the [demo](https://dknight.github.io/dkn-range-slider/demo/).
+
+## Installation
 
 NPM
 ```shell
@@ -14,7 +18,7 @@ CDN
 <script src="https://unpkg.com/dkn-range-slider@latest/dist/dkn-range-slider.min.js" defer></script>
 ```
 
-### Usage
+## Usage
 
 When you include this script into your HTML page you can use web-components with custom tag.
 
@@ -22,9 +26,9 @@ When you include this script into your HTML page you can use web-components with
 <dkn-range-slider></dkn-range-slider>
 ```
 
-## API
+### API
 
-### Attributes and properties
+#### Attributes and properties
 
 Attribute       | Reflected property      | Type    | Default value  | Description
 --------------- | ------------------------|---------| -------------- | -----------
@@ -52,7 +56,7 @@ By default there is fallback in web-components itself which has 'default' theme.
 <link rel="stylesheet" href="minimal.css">
 ```
 
-## Custom styling
+### Custom styling
 
 Custom styling is done by CSS custom properties. You can copy the default.css from src/ directory and set your own styles.
 
@@ -62,10 +66,23 @@ Custom styling is done by CSS custom properties. You can copy the default.css fr
 No support. Old IE11 and Edge don't support web-components and Shadow DOM natively.
 If you have proper skills and knowledge you can try to use polyfills.
 
-## Testing
+
+## Contributing
+
+1. Fork it!
+2. Create your feature branch: git checkout -b my-new-feature
+3. Commit your changes: git commit -am 'Add some feature'
+4. Push to the branch: git push origin my-new-feature
+5. Submit a pull request.
+
+### Testing
 
 Run the unit tests.
 
 ```shell
 npm test
 ```
+
+## License
+
+2020-2021 Dknight [MIT](https://opensource.org/licenses/MIT).
