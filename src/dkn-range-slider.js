@@ -32,7 +32,7 @@
  * @property {boolean} [ticks=false] Enables ticks.
  * @property {number} [ticksStep=1] Override steps for ticks.
  */
-class DknRangeSlider extends HTMLElement {
+export class DknRangeSlider extends HTMLElement {
   /**
    * @constructor
    */

@@ -1,8 +1,8 @@
 {
   "name": "dkn-range-slider",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Custom range input based on web components API.",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "build": "gulp",
     "test": "karma start",

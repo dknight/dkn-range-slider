@@ -1,7 +1,7 @@
 /*
  * https://github.com/dknight/dkn-range-slider
  * @license MIT
- * @version 0.1.7
+ * @version 0.1.8
 */
 /**
  * Custom range input based on web components API.
@@ -32,7 +32,7 @@
  * @property {boolean} [ticks=false] Enables ticks.
  * @property {number} [ticksStep=1] Override steps for ticks.
  */
-class DknRangeSlider extends HTMLElement {
+export class DknRangeSlider extends HTMLElement {
   /**
    * @constructor
    */
