@@ -9,8 +9,8 @@
  * @class DknRangeSlider
  * @extends HTMLElement
  *
- * @property {string} [name=null] Proxy attribute to input[type=range]. This name
- * is passed to form data.
+ * @property {string} [name=null] Proxy attribute to input[type=range].
+ * This name is passed to form data.
  * @property {number} [value=50] Proxy attribute to input[type=range] value.
  * @property {number} [min=0] Proxy attribute to input[type=range] minimum.
  * @property {number} [max=0] Proxy attribute to input[type=range] maximum.
@@ -47,8 +47,7 @@ class DknRangeSlider extends HTMLElement {
    * @private
    * @static
    */
-  static CONTROL_ATTRS = ['value', 'min', 'max',
-    'step', 'name', 'disabled']
+  static CONTROL_ATTRS = ['value', 'min', 'max', 'step', 'name', 'disabled'];
   
   /**
    * Range selector id.
@@ -63,8 +62,7 @@ class DknRangeSlider extends HTMLElement {
    * @returns {Array<string>}
    */
   static get observedAttributes() {
-    return DknRangeSlider
-        .CONTROL_ATTRS
+    return DknRangeSlider.CONTROL_ATTRS
         .concat(['label-value', 'label-limit-min',
             'label-limit-max', 'ticks', 'ticks-step']);
   }
@@ -89,10 +87,11 @@ class DknRangeSlider extends HTMLElement {
   
   /**
    * Min getter.
+   * @default 0
    * @return {number}
    */
   get min() {
-    return Number(this.getAttribute('min'));
+    return Number(this.control.min) || 0;
   }
   
   /**
@@ -106,10 +105,11 @@ class DknRangeSlider extends HTMLElement {
   
   /**
    * Max getter.
+   * @default 100
    * @return {number}
    */
   get max() {
-    return Number(this.control.max);
+    return Number(this.control.max) || 100;
   }
   
   /**
@@ -293,8 +293,7 @@ class DknRangeSlider extends HTMLElement {
     const input = document.createElement('input');
     input.type = 'range';
     [...this.attributes].forEach((attr) => {
-      if (DknRangeSlider.CONTROL_ATTRS
-          .indexOf(attr.nodeName) !== -1) {
+      if (DknRangeSlider.CONTROL_ATTRS.indexOf(attr.nodeName) !== -1) {
         input.setAttribute(attr.nodeName, attr.nodeValue);
       }
     });
@@ -321,7 +320,7 @@ class DknRangeSlider extends HTMLElement {
    * @param {string | number} value
    */
   updateLabel(value) {
-    const p = value / this.control.max * 100 + '%'; //fixme
+    const p = value / this.max * 100 + '%';
     this.style.setProperty('--tx', p);
     if (this.labelValue) {
       this.labelElem.innerText = this.getLabelText();
