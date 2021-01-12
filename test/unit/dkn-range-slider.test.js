@@ -26,7 +26,7 @@ describe('DknRangeSelector', () => {
       expect(slider1.name).to.be.null;
       expect(slider1.value).to.equal(50);
       expect(slider1.min).to.equal(0);
-      expect(slider1.max).to.equal(0);
+      expect(slider1.max).to.equal(100);
       expect(slider1.step).to.equal(1);
       expect(slider1.disabled).to.be.false;
       expect(slider1.labelValue).to.be.false;
@@ -56,8 +56,8 @@ describe('DknRangeSelector', () => {
     it('should have default values as native input', () => {
       const nativeRangeInput = document.createElement('input');
       nativeRangeInput.setAttribute('type', 'range');
-      expect(slider1.min).to.equal(Number(nativeRangeInput.min));
-      expect(slider1.max).to.equal(Number(nativeRangeInput.max));
+      expect(slider1.min).to.equal(0);
+      expect(slider1.max).to.equal(100);
       expect(slider1.step).to.equal(1);
       expect(slider1.value).to.equal(Number(nativeRangeInput.value));
     });

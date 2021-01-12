@@ -10,6 +10,7 @@ styling API based on CSS custom-properties.
 ```
 <custom-element-demo>
   <template>
+    <link rel="import" href="demo/dkn-range-slider.html">
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>

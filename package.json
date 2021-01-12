@@ -1,6 +1,6 @@
 {
   "name": "dkn-range-slider",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "description": "Custom range input based on web components API.",
   "main": "src/dkn-range-slider.js",
   "scripts": {
