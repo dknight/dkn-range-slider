@@ -1,4 +1,5 @@
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/dkn-range-slider)
+[![npm version](https://badge.fury.io/js/dkn-range-slider.svg)](https://badge.fury.io/js/dkn-range-slider)
 
 # <dkn-range-slider>
 
@@ -10,7 +11,7 @@ styling API based on CSS custom-properties.
 ```
 <custom-element-demo>
   <template>
-    <link rel="import" href="demo/dkn-range-slider.html">
+    <script src="https://unpkg.com/dkn-range-slider@latest/dist/dkn-range-slider.min.js"></script>
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
@@ -31,7 +32,7 @@ npm install dkn-range-slider
 
 CDN
 ```html
-<script src="https://unpkg.com/dkn-range-slider@latest/dist/dkn-range-slider.min.js" defer></script>
+<script src="https://unpkg.com/dkn-range-slider@latest/dist/dkn-range-slider.min.js"></script>
 ```
 
 ## Usage
