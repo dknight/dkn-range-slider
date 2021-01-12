@@ -1,10 +1,25 @@
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/dkn-range-slider)
+
 # dkn-range-slider
 
 Custom range-input based on web components API with zero dependencies (2.7kb gzipped).
 Some themes already included out-of-box in the packaged, but the slider has rich CSS
 styling API based on CSS custom-properties.
 
-Check the [demo](https://dknight.github.io/dkn-range-slider/demo/).
+<!--
+```
+<custom-element-demo>
+  <template>
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<dkn-range-slider></dkn-range-slider>
+```
+
+Check the [live demo](https://dknight.github.io/dkn-range-slider/demo/).
 
 ## Installation
 
