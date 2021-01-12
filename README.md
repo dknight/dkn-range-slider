@@ -1,7 +1,7 @@
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/dkn-range-slider)
 [![npm version](https://badge.fury.io/js/dkn-range-slider.svg)](https://badge.fury.io/js/dkn-range-slider)
 
-# <dkn-range-slider>
+# &lt;dkn-range-slider&gt;
 
 Custom range-input based on web components API with zero dependencies (2.7kb gzipped).
 Some themes already included out-of-box in the packaged, but the slider has rich CSS
