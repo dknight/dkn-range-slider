@@ -32,7 +32,7 @@
  * @property {boolean} [ticks=false] Enables ticks.
  * @property {number} [ticksStep=1] Override steps for ticks.
  */
-export class DknRangeSlider extends HTMLElement {
+class DknRangeSlider extends HTMLElement {
   /**
    * @constructor
    */
@@ -538,6 +538,4 @@ export class DknRangeSlider extends HTMLElement {
 }
 
 /* istanbul ignore else */
-if (!customElements.get('dkn-range-slider')) {
-  customElements.define('dkn-range-slider', DknRangeSlider);
-}
+window.customElements.define('dkn-range-slider', DknRangeSlider);
